@@ -4,7 +4,7 @@ import Page from '../components/auspol';
 import Nav from '../components/nav';
 import { Container } from 'react-bootstrap';
 
-const Home = ({ values, cities, lat, long }) => (
+const Home = ({ values, cities, lat, long, climateValues }) => (
 	<>
 		<Nav />
 		<Container
@@ -13,7 +13,7 @@ const Home = ({ values, cities, lat, long }) => (
 				marginTop: '50px',
 			}}
 		>
-			<Page values={values} cities={cities} lat={lat} long={long} />
+			<Page values={values} cities={cities} lat={lat} long={long} climateValues={climateValues} />
 		</Container>
 	</>
 );
@@ -30,8 +30,9 @@ Home.getInitialProps = async (ctx) => {
 	const values = [temp['adelaide'], temp['melbourne'], temp['sydney'], temp['brisbane'], temp['perth']];
 	const cities = ['adelaide', 'melbourne', 'sydney', 'brisbane', 'perth'];
 	const lat = [-34.92, -37.8, -33.87, -27.469, -31.9505];
-	const long = [138.59, 144.97, 151.2, 153.02, 115.8605];
-	return { values, cities, lat, long };
+  const long = [138.59, 144.97, 151.2, 153.02, 115.8605];
+  const climateValues = [127, 316, 310, 178, 259]
+	return { values, cities, lat, long, climateValues };
 };
 
 export default Home;

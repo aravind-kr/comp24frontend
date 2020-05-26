@@ -14,7 +14,7 @@ export class MapContainer extends Component {
 					lng: 134.7544,
 				}}
 				google={this.props.google}
-				style={{ width: '100%', height: '70%', position: 'relative' }}
+				style={{ width: '100%', height: '40%', position: 'relative' }}
 				className={'map'}
 				zoom={4}
 			>
