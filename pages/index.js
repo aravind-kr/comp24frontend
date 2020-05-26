@@ -20,7 +20,13 @@ const Home = ({ values, cities, lat, long }) => (
 
 Home.getInitialProps = async (ctx) => {
 	console.log('some');
-	const res = await fetch('http://172.26.131.0:3000/data');
+	const res = await fetch('http://172.26.131.0:3000/data', {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  });
 	const temp = await res.json();
   console.log(temp);
   const values = [ temp['adelaide'],  temp['melbourne'],   temp['sydney'], temp['brisbane'],temp['perth'] ]
