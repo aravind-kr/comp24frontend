@@ -7,6 +7,7 @@ export class MapContainer extends Component {
 		var cities = this.props.cities;
 		var lat = this.props.lat;
 		var long = this.props.long;
+		var height = this.props.height;
 		return (
 			<Map
 				initialCenter={{
@@ -14,7 +15,7 @@ export class MapContainer extends Component {
 					lng: 134.7544,
 				}}
 				google={this.props.google}
-				style={{ width: '100%', height: '40%', position: 'relative' }}
+				style={{ width: '100%', height: height, position: 'relative' }}
 				className={'map'}
 				zoom={4}
 			>

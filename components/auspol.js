@@ -10,15 +10,15 @@ export default function Auspol(props) {
 
 	return (
 		<>
-			<div style={{ display: 'flex', flexDirection: 'row' }}>
+			<div style={{ display: 'flex', flexDirection: 'row', marginBottom: '40px' }}>
 				<Card style={{ flex: 1, marginRight: '10px', height: '1000px' }}>
-					<MapContainer values={props.values} cities={props.cities} lat={props.lat} long={props.long} />
+					<MapContainer values={props.values} cities={props.cities} lat={props.lat} long={props.long} height={'40%'} />
 					<Card.Body style={{ marginTop: '72%' }}>
 						<Card.Title>Scenario 1: Election Awareness Analysis </Card.Title>
 						<Card.Text>
 							The Awareness and Outspokeness about election and politics is analyzed under the first
 							scenario in five major cities ('adelaide', 'melbourne', 'sydney', 'brisbane', 'perth'). The
-							Graph below shows us the percentage of voters that are outspoken about election and politics
+							Bar chart below shows us the percentage of voters that are outspoken about election and politics
 							on twitter.
 						</Card.Text>
 						<div style={{ marginLeft: '40px' }}>
@@ -159,20 +159,23 @@ export default function Auspol(props) {
 					<Card.Img variant="top" src="static/tweets.png" />
 				</Card>
 
-				<Card style={{ flex: 1, marginLeft: '10px', height: '500px' }}>
+				<Card style={{ flex: 1, marginLeft: '10px', height: '930px' }}>
 					<MapContainer
 						values={props.climateValues}
 						cities={props.cities}
 						lat={props.lat}
 						long={props.long}
+						height={'43%'}
 					/>
-					{console.log(props)}
-					<Card.Body style={{ marginTop: '70%' }}>
-						<Card.Title>Election Analysis </Card.Title>
+					<Card.Body style={{ marginTop: '72%' }}>
+						<Card.Title> Scenario 2: Climate and Election </Card.Title>
 						<Card.Text>
-							Election related tweet count from 5 major cities ('adelaide', 'melbourne', 'sydney',
-							'brisbane', 'perth') are displayed above. Please hover over the marker of exact value.
+							The Reach of ClimateChange and it's affect of corelation with the election can 
+							be analysis through Climate and Election related tweets. 5 major cities like 
+							('adelaide', 'melbourne', 'sydney', 'brisbane', 'perth') are included for this 
+							analysis. The Bar chart below illustrates the results found.
 						</Card.Text>
+						<Card.Img variant="top" src="static/climate.png" />
 					</Card.Body>
 				</Card>
 			</div>
