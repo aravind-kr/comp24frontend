@@ -22,7 +22,7 @@ export class MapContainer extends Component {
 					return (
 						<Marker
 							key={index}
-							title={cities[index] + ' - ' + values[index]}
+							title={cities[index] + ' - ' + values[index]+ ' tweets'}
 							name={'SOMA'}
 							position={{ lat: item, lng: long[index] }}
 						/>
