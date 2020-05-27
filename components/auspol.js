@@ -175,7 +175,7 @@ export default function Auspol(props) {
 							('adelaide', 'melbourne', 'sydney', 'brisbane', 'perth') are included for this 
 							analysis. The Bar chart below illustrates the results found.
 						</Card.Text>
-						<Card.Img variant="top" src="static/climate.png" />
+						<Card.Img variant="top" src="static/climatechange.png" />
 					</Card.Body>
 				</Card>
 			</div>
