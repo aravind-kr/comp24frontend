@@ -146,7 +146,7 @@ export default function Auspol(props) {
 											<tbody>
 												<tr>
 													<td>3433</td>
-													<td>1181</td>
+													<td>11816</td>
 													<td>29.05%</td>
 												</tr>
 											</tbody>
